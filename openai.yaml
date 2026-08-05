@@ -1,0 +1,7 @@
+interface:
+  display_name: "看见情绪"
+  short_description: "一次一个短问题，帮助用户看清情绪、想法与行为模式"
+  default_prompt: "使用 $see-your-emotions，只通过一次一个短问题帮助我觉察当前情绪与行为模式。"
+
+policy:
+  allow_implicit_invocation: true
