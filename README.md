@@ -28,94 +28,35 @@
 
 ## 快速安装
 
+### 最简单的方式：复制 GitHub 地址
+
+仓库地址：
+
+```text
+https://github.com/zoenghao-gif/see-your-emotions
+```
+
+如果你的 Agent 有“从 GitHub 导入”“从 URL 安装 Skill”或类似功能，直接粘贴上面的地址即可。
+
+如果它要求你填写具体的 Skill 目录，则使用这个地址：
+
+```text
+https://github.com/zoenghao-gif/see-your-emotions/tree/main/skills/see-your-emotions
+```
+
 ### 使用统一安装器
 
-需要 Node.js 的环境可以运行：
+支持 `npx skills` 的 Agent，可以直接复制下面这一行：
 
 ```bash
-npx skills add zoenghao-gif/see-your-emotions --skill see-your-emotions -g
+npx skills add https://github.com/zoenghao-gif/see-your-emotions --skill see-your-emotions -g
 ```
 
-也可以指定 Agent：
+这个安装器支持 Codex、Claude Code、Kimi、Hermes、CodeBuddy 等多个 Agent。安装完成后，直接对 Agent 说“使用看见情绪”即可。
 
-```bash
-npx skills add zoenghao-gif/see-your-emotions \
-  --skill see-your-emotions \
-  --agent claude-code \
-  --agent codex \
-  -g
-```
+### 如果 Agent 不支持 URL 导入
 
-### Codex
-
-将 `skills/see-your-emotions/` 放入以下任一位置：
-
-```text
-项目级：.agents/skills/see-your-emotions/
-用户级：~/.agents/skills/see-your-emotions/
-```
-
-也可以使用：
-
-```bash
-gh skill install zoenghao-gif/see-your-emotions see-your-emotions \
-  --agent codex --scope user
-```
-
-### Claude Code
-
-```bash
-mkdir -p ~/.claude/skills
-cp -R skills/see-your-emotions ~/.claude/skills/
-```
-
-安装后可以直接输入：
-
-```text
-/see-your-emotions
-```
-
-### Kimi Code CLI
-
-优先安装到通用目录：
-
-```text
-~/.agents/skills/see-your-emotions/
-```
-
-也可以使用 Kimi 支持的用户级目录：
-
-```text
-~/.kimi/skills/see-your-emotions/
-```
-
-然后输入 `/skill:see-your-emotions`，或者直接描述需要梳理的事情。
-
-### Hermes Agent
-
-可以从 GitHub 直接安装：
-
-```bash
-hermes skills install zoenghao-gif/see-your-emotions/skills/see-your-emotions
-```
-
-也可以把 `skills/see-your-emotions/` 放入 `~/.hermes/skills/`。
-
-### WorkBuddy / CodeBuddy
-
-优先使用客户端的“技能 / Skills / 导入 Skill”功能，选择本仓库中的：
-
-```text
-skills/see-your-emotions/
-```
-
-CodeBuddy 项目级目录为：
-
-```text
-.codebuddy/skills/see-your-emotions/
-```
-
-不同版本的 WorkBuddy 可能使用不同的全局目录，因此建议优先使用界面导入。
+将仓库中的 `skills/see-your-emotions/` 文件夹复制到该 Agent 的 Skills 目录即可。不同 Agent 的目录可能不同，因此建议优先使用前面的 GitHub / URL 导入方式。
 
 ## 怎么使用
 
